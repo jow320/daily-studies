@@ -9,12 +9,13 @@ let shield = window.confirm("Ele possui um escudo?");
 let damage = 0;
 
 if (atkPower > defense) {
-  if (shield) {
-    damage = (atkPower - defense) / 2;
-  } else {
+  if (shield == false) {
     damage = atkPower - defense;
+  } else {
+    damage = (atkPower - defense) / 2;
   }
-} else {
+}
+if (atkPower <= defense) {
   damage = 0;
 }
 
