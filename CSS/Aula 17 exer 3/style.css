@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+h2 {
+  margin-top: 50px;
+}
+li {
+  background-color: #458ce9;
+  color: #ffffff;
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 20px;
+  border-radius: 30px;
+}
+.black {
+  background-color: black;
+  color: white;
+  display: inline-block;
+  border-radius: 30px;
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 20px;
+}
+.black2 {
+  background-color: black;
+  color: white;
+  display: inline-block; /* Mudança de inline-block para block */
+  border-radius: 30px;
+  margin: 20px auto; /* Adiciona margem vertical e centraliza o elemento */
+  padding: 20px;
+}
+.img {
+  display: block; /* Certifica que a imagem é um bloco */
+  margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}

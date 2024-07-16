@@ -1,0 +1,24 @@
+li:nth-child(2) {
+  color: #f00;
+}
+
+li:nth-child(3n) {
+  color: #00f;
+}
+
+li:hover {
+  background-color: #999;
+}
+
+li::before {
+  content: "(antes) ";
+}
+
+li::after {
+  content: " (depois)";
+}
+
+/* o usamos para estilizar os filhos que não são o primeiro: */
+li:not(:first-child) {
+  color: rgb(0, 255, 255);
+}

@@ -1,0 +1,15 @@
+li {
+  background-color: #1f1d1d;
+  color: #ffffff;
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 80px;
+  border-radius: 4px;
+}
+.selected {
+  border: solid 4px blue;
+}
+.hidden {
+  display: none;
+}
