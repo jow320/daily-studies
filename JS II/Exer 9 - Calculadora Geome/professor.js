@@ -27,7 +27,7 @@ function calcularAreaCirculo() {
   return 3.14 * raio * raio;
 }
 
-function ExibirMenu() {
+function exibirMenu() {
   return prompt(
     "Calculadora Geométrica\n" +
       "1. Calcular área de triângulo\n" +
@@ -40,38 +40,37 @@ function ExibirMenu() {
 }
 
 function executar() {
-  let opcao = "";
+  do {
+    option = exibirMenu();
+    let resultado;
+    switch (option) {
+      case 1:
+      case "1":
+        resultado = calcularAreaTriangulo();
+        break;
+      case "2":
+        resultado = calcularAreaRetangulo();
+        break;
+      case "3":
+        resultado = calcularAreaQuadrado();
+        break;
+      case "4":
+        resultado = calcularAreaTrapezio();
+        break;
+      case "5":
+        resultado = calcularAreaCirculo();
+        break;
+      case "6":
+        alert("Saindo...");
+        break;
+      default:
+        alert("Opção inválida!");
+        break;
+    }
+    if (resultado) {
+      alert("O resultado é : " + resultado);
+    }
+  } while (option != 6);
 }
 
-do {
-  opcao = ExibirMenu();
-  let resultado;
-
-  switch (opcao) {
-    case "1":
-      resultado = calcularAreaTriangulo();
-      break;
-    case "2":
-      resultado = calcularAreaRetangulo();
-      break;
-    case "3":
-      resultado = calcularAreaQuadrado();
-      break;
-    case "4":
-      resultado = calcularAreaTrapezio();
-      break;
-    case "5":
-      resultado = calcularAreaCirculo();
-      break;
-    case "6":
-      alert("Saindo...");
-      break;
-    default:
-      alert("Opção inválida!");
-      break;
-  }
-
-  if (resultado) {
-    alert("Resultado: " + resultado);
-  }
-} while (option != 6);
+executar();
