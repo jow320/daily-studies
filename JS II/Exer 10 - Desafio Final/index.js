@@ -35,6 +35,25 @@ function criarVagas() {
   }
 }
 
+function visualizarVaga() {
+  indice = prompt("Qual o número da vaga que deseja visualizar?");
+  if ((indice) => 0) {
+    alert(
+      "A vaga é a de número" +
+        indice +
+        "\nNome: " +
+        vaga.nome +
+        "\ndescrição: " +
+        descricao +
+        "\n Data limite: " +
+        dataLimite +
+        "\n Há :" +
+        candidatos.length +
+        " candidatos inscritos nela."
+    );
+  }
+}
+
 function exibirMenu() {
   return prompt(
     "1. Listar vagas disponíveis\n" +
