@@ -13,8 +13,8 @@ function listarVagas() {
 
 function criarVagas() {
   const nome = prompt("Qual o nome da vaga?");
-  const descricao = prompt("Qual o nome da vaga?");
-  const dataLimite = prompt("Qual o nome da vaga?");
+  const descricao = prompt("Qual a descrição da vaga?");
+  const dataLimite = prompt("Qual a data limite?");
   const confirma = confirm(
     "Nome da vaga: " +
       nome +
@@ -36,21 +36,65 @@ function criarVagas() {
 }
 
 function visualizarVaga() {
-  indice = prompt("Qual o número da vaga que deseja visualizar?");
-  if ((indice) => 0) {
+  let indice = parseInt(prompt("Qual o número da vaga que deseja visualizar?"));
+  const vaga = vagas[indice];
+  const candidatosInscritos = vaga.candidatos.reduce(function (
+    acumulador,
+    candidato
+  ) {
+    return acumulador + "\n -" + candidato;
+  },
+  "");
+  if (indice >= 0 && indice < vagas.length) {
     alert(
       "A vaga é a de número" +
         indice +
         "\nNome: " +
-        vaga.nome +
+        vaga.nome[indice] +
         "\ndescrição: " +
-        descricao +
+        descricao[indice] +
         "\n Data limite: " +
-        dataLimite +
+        dataLimite[indice] +
         "\n Há :" +
         candidatos.length +
-        " candidatos inscritos nela."
+        " candidatos inscritos nela e e eles são: " +
+        candidatosInscritos
     );
+  }
+}
+
+function inscresverCan() {
+  const novocan = prompt("Qual o nome do candidato?");
+  const indice = parseInt(prompt("Qual o número da vaga?"));
+  const confirm = confirm(
+    "A vaga em questão é a " +
+      vagas.nome[indice] +
+      "\n Descrição: " +
+      vagas.descricao[indice] +
+      "\n Data limite: " +
+      vagas.dataLimite[indice] +
+      "\n Candidatos inscritos: " +
+      vagas.candidatos.length
+  );
+  if (confirm) {
+    vagas.candidatos.push(novocan);
+  }
+}
+
+function excluirVaga() {
+  const indice = parseInt(prompt("Qual o número da vaga?"));
+  const confirm = confirm(
+    "A vaga em questão é a " +
+      vagas.nome[indice] +
+      "\n Descrição: " +
+      vagas.descricao[indice] +
+      "\n Data limite: " +
+      vagas.dataLimite[indice] +
+      "\n Candidatos inscritos: " +
+      vagas.candidatos.length
+  );
+  if (confirm) {
+    vagas[indice].splice();
   }
 }
 
@@ -79,11 +123,14 @@ function executar() {
         criarVagas();
         break;
       case "3":
+        visualizarVaga();
         break;
       case "4":
+        inscresverCan();
         break;
       case "5":
-
+        excluirVaga();
+        break;
       case "6":
         alert("Saindo...");
         break;
