@@ -50,11 +50,11 @@ function visualizarVaga() {
       "A vaga é a de número" +
         indice +
         "\nNome: " +
-        vaga.nome[indice] +
+        vaga.nome +
         "\ndescrição: " +
-        descricao[indice] +
+        descricao +
         "\n Data limite: " +
-        dataLimite[indice] +
+        dataLimite +
         "\n Há :" +
         candidatos.length +
         " candidatos inscritos nela e e eles são: " +
@@ -66,15 +66,16 @@ function visualizarVaga() {
 function inscresverCan() {
   const novocan = prompt("Qual o nome do candidato?");
   const indice = parseInt(prompt("Qual o número da vaga?"));
+  const vaga = vagas[indice];
   const confirm = confirm(
     "A vaga em questão é a " +
-      vagas.nome[indice] +
+      vaga.nome[indice] +
       "\n Descrição: " +
-      vagas.descricao[indice] +
+      vaga.descricao[indice] +
       "\n Data limite: " +
-      vagas.dataLimite[indice] +
+      vaga.dataLimite[indice] +
       "\n Candidatos inscritos: " +
-      vagas.candidatos.length
+      vaga.candidatos.length
   );
   if (confirm) {
     vagas.candidatos.push(novocan);
@@ -83,15 +84,16 @@ function inscresverCan() {
 
 function excluirVaga() {
   const indice = parseInt(prompt("Qual o número da vaga?"));
+  const vaga = vagas[indice];
   const confirm = confirm(
     "A vaga em questão é a " +
-      vagas.nome[indice] +
+      vaga.nome +
       "\n Descrição: " +
-      vagas.descricao[indice] +
+      vaga.descricao +
       "\n Data limite: " +
-      vagas.dataLimite[indice] +
+      vaga.dataLimite +
       "\n Candidatos inscritos: " +
-      vagas.candidatos.length
+      vaga.candidatos.length
   );
   if (confirm) {
     vagas[indice].splice();
