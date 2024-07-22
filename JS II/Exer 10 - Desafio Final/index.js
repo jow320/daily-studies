@@ -37,66 +37,78 @@ function criarVagas() {
 
 function visualizarVaga() {
   let indice = parseInt(prompt("Qual o número da vaga que deseja visualizar?"));
-  const vaga = vagas[indice];
-  const candidatosInscritos = vaga.candidatos.reduce(function (
-    acumulador,
-    candidato
-  ) {
-    return acumulador + "\n -" + candidato;
-  },
-  "");
   if (indice >= 0 && indice < vagas.length) {
+    const vaga = vagas[indice];
+    const candidatosInscritos = vaga.candidatos.reduce(function (
+      acumulador,
+      candidato
+    ) {
+      return acumulador + "\n -" + candidato;
+    },
+    "");
+
     alert(
       "A vaga é a de número" +
         indice +
         "\nNome: " +
         vaga.nome +
         "\ndescrição: " +
-        descricao +
+        vaga.descricao +
         "\n Data limite: " +
-        dataLimite +
+        vaga.dataLimite +
         "\n Há :" +
-        candidatos.length +
+        vaga.candidatos.length +
         " candidatos inscritos nela e e eles são: " +
         candidatosInscritos
     );
+  } else {
+    alert("Indíce Invalido!");
   }
 }
 
-function inscresverCan() {
+function inscreverCandidato() {
   const novocan = prompt("Qual o nome do candidato?");
   const indice = parseInt(prompt("Qual o número da vaga?"));
-  const vaga = vagas[indice];
-  const confirm = confirm(
-    "A vaga em questão é a " +
-      vaga.nome[indice] +
-      "\n Descrição: " +
-      vaga.descricao[indice] +
-      "\n Data limite: " +
-      vaga.dataLimite[indice] +
-      "\n Candidatos inscritos: " +
-      vaga.candidatos.length
-  );
-  if (confirm) {
-    vagas.candidatos.push(novocan);
+  if (indice >= 0 && indice < vagas.length) {
+    const vaga = vagas[indice];
+    const confirma = confirm(
+      "A vaga em questão é a " +
+        vaga.nome +
+        "\n Descrição: " +
+        vaga.descricao +
+        "\n Data limite: " +
+        vaga.dataLimite +
+        "\n Candidatos inscritos: " +
+        vaga.candidatos.length
+    );
+    if (confirma) {
+      vaga.candidatos.push(novocan);
+    } else {
+      alert("Invalido!");
+    }
   }
 }
 
 function excluirVaga() {
   const indice = parseInt(prompt("Qual o número da vaga?"));
-  const vaga = vagas[indice];
-  const confirm = confirm(
-    "A vaga em questão é a " +
-      vaga.nome +
-      "\n Descrição: " +
-      vaga.descricao +
-      "\n Data limite: " +
-      vaga.dataLimite +
-      "\n Candidatos inscritos: " +
-      vaga.candidatos.length
-  );
-  if (confirm) {
-    vagas[indice].splice();
+  if (indice >= 0 && indice < vagas.length) {
+    const vaga = vagas[indice];
+    const confirma = confirm(
+      "A vaga em questão é a " +
+        vaga.nome +
+        "\n Descrição: " +
+        vaga.descricao +
+        "\n Data limite: " +
+        vaga.dataLimite +
+        "\n Candidatos inscritos: " +
+        vaga.candidatos.length +
+        "\n Deseja realmente excluir a vaga?"
+    );
+    if (confirma) {
+      vaga.splice(indice, 1);
+    } else {
+      alert("Inválido!");
+    }
   }
 }
 
@@ -128,7 +140,7 @@ function executar() {
         visualizarVaga();
         break;
       case "4":
-        inscresverCan();
+        inscreverCandidato();
         break;
       case "5":
         excluirVaga();
