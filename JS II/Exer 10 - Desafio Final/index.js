@@ -90,25 +90,24 @@ function inscreverCandidato() {
 }
 
 function excluirVaga() {
-  const indice = parseInt(prompt("Qual o número da vaga?"));
-  if (indice >= 0 && indice < vagas.length) {
-    const vaga = vagas[indice];
-    const confirma = confirm(
-      "A vaga em questão é a " +
-        vaga.nome +
-        "\n Descrição: " +
-        vaga.descricao +
-        "\n Data limite: " +
-        vaga.dataLimite +
-        "\n Candidatos inscritos: " +
-        vaga.candidatos.length +
-        "\n Deseja realmente excluir a vaga?"
-    );
-    if (confirma) {
-      vaga.splice(indice, 1);
-    } else {
-      alert("Inválido!");
-    }
+  const indice = prompt("Informe o índice da vaga que deseja excluir:");
+  const vaga = vagas[indice];
+
+  const confirmacao = confirm(
+    "Tem certeza que deseja excluir a vaga " +
+      indice +
+      "?\n" +
+      "Nome: " +
+      vaga.nome +
+      "\nDescrição: " +
+      vaga.descricao +
+      "\nData limite: " +
+      vaga.dataLimite
+  );
+
+  if (confirmacao) {
+    vagas.splice(indice, 1);
+    alert("Vaga excluída.");
   }
 }
 
