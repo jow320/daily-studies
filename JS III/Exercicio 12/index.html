@@ -9,12 +9,17 @@
   <body>
     <h1>Cadastro de Devs</h1>
     <hr />
-    <p><form id="devForm"><label for="devName">Nome: </label>
-        <input type="text" name="devName" id="devName" />
-        <br /><br />
-    <button id="tecButton">Adicionar Tecnologia</button>
-    <button type="submit" id="submit">Enviar Dados</button>
-    
-</form></p>
+
+    <h2>Cadastrar novo desenvolvedor</h2>
+
+    <form id="devForm">
+      <label for="fullname">Nome Completo:</label>
+      <input type="text" name="fullname" id="fullname" /><br /><br />
+
+      <label>Tecnologias</label><br />
+      <button type="button" id="addTechBtn">Adicionar Tecnologia</button>
+      <ul id="stackInputs"></ul>
+      <button type="submit" id="submit">Cadastrar</button>
+    </form>
   </body>
 </html>
