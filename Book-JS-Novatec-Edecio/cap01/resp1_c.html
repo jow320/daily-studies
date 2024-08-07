@@ -1,0 +1,17 @@
+<script>
+  const price = Number(
+    prompt(
+      "Qual o valor do produto? Possuimos 10% à vista, e parcelamos em até 3 vezes sem júros!"
+    )
+  );
+
+  const tenPercent = price * 0.1;
+
+  const card3x = price / 3;
+
+  alert(
+    `Preço do produto: R$${price.toFixed(2)}\nÀ vista: R$${(
+      price - tenPercent
+    ).toFixed(2)}\nOu 3x de R$: ${card3x.toFixed(2)}`
+  );
+</script>
