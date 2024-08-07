@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "hello": "hello-world-npm",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "hello-world-npm": "^1.1.1"
+  }
 }
