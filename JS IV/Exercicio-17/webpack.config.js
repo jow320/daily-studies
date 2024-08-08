@@ -1,13 +1,20 @@
 const path = require("path");
 
 module.exports = {
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, "dist"),
+    },
+    compress: true,
+    port: 8000,
+  },
   entry: {
-    main: "./src/index.js",
+    index: "./src/index.js",
   },
   mode: "production",
   output: {
     path: path.resolve(__dirname, "public"),
-    filename: "[name].bundle.min.js",
+    filename: "[name].min.js",
   },
   module: {
     rules: [
