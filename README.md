@@ -38,4 +38,4 @@ Feel free to reach out if you have any questions or just want to connect!
 
 ---
 
-Happy coding! Let's learn and grow together 🚀
+Let's learn and grow together 🚀
