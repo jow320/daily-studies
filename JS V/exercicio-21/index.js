@@ -20,9 +20,16 @@ const warrior = new Warrior("Warrior", 100, 50, 25, 25);
 // console.log(baseCharacter);
 // Mage Working! /\ Attack and Heal
 
-// console.log(warrior);
+// console.table(warrior);
 // warrior.changePosition();
-// console.log(warrior);
+// console.table(warrior);
+// console.table(baseCharacter);
+// warrior.attackAction(baseCharacter);
+// console.table(baseCharacter);
+// warrior.changePosition();
+// warrior.attackAction(baseCharacter);
+// console.table(baseCharacter);
+// Fixed Warrior stancing
 // warrior.changePosition();
 // console.log(warrior);
 // Warrior Working! /\ Changing positions!
