@@ -1,0 +1,19 @@
+{
+  "transactions": [
+    {
+      "id": "1",
+      "name": "Pedro Bó",
+      "value": "20"
+    },
+    {
+      "id": "bdc9",
+      "name": "João Tenório",
+      "value": "25"
+    },
+    {
+      "id": "5c3a",
+      "name": "Rodrigo",
+      "value": "-20"
+    }
+  ]
+}

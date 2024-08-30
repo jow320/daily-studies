@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício Final</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main style="display: flex; gap: 4rem; margin: 1rem 2rem">
+      <form action="http://localhost:3000/transactions" method="post">
+        <h2>Fazer uma Transação</h2>
+        <label for="title">ID:</label>
+        <br />
+        <input type="text" id="ID" name="ID" />
+        <br />
+        <label for="name">Nome:</label>
+        <br />
+        <input type="text" id="name" name="name" />
+        <br />
+        <label for="value">Valor:</label>
+        <br />
+        <input type="number" id="value" name="value" />
+        <br />
+        <button id="post">Salvar</button>
+        <button id="put">Atualizar</button>
+        <button id="delete">Remover</button>
+      </form>
+      <div>
+        <h2>Transações</h2>
+        <section id="transactions"></section>
+        <h2>Valor Total</h2>
+        <section id="totalValue"></section>
+      </div>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
