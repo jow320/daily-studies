@@ -1,0 +1,8 @@
+ Nome do OS: win32, Arquitetura do OS: x64, Tempo de Atividade: 18889.687 segundos, Percentual utilizado de memória: 34.74%, Modelo do processador: AMD Ryzen 7 3700X 8-Core Processor             
+
+ Nome do OS: win32, Arquitetura do OS: x64, Tempo de Atividade: 18890.703 segundos, Percentual utilizado de memória: 34.74%, Modelo do processador: AMD Ryzen 7 3700X 8-Core Processor             
+
+ Nome do OS: win32, Arquitetura do OS: x64, Tempo de Atividade: 18891.718 segundos, Percentual utilizado de memória: 34.74%, Modelo do processador: AMD Ryzen 7 3700X 8-Core Processor             
+
+ Nome do OS: win32, Arquitetura do OS: x64, Tempo de Atividade: 18892.734 segundos, Percentual utilizado de memória: 34.84%, Modelo do processador: AMD Ryzen 7 3700X 8-Core Processor             
+
