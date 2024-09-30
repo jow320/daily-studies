@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resultados de Commander - Setembro</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f4f4f9;
+      }
+      h1,
+      h2 {
+        text-align: center;
+        color: #333;
+      }
+      #myChart1,
+      #myChart2 {
+        max-width: 600px;
+        margin: 20px auto;
+      }
+      table {
+        width: 50%;
+        margin: 20px auto;
+        border-collapse: collapse;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #333;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Resultados dos Mesões de Commander - Setembro</h1>
+
+    <h2>Jogadores com mais Vitórias</h2>
+    <canvas id="myChart1"></canvas>
+    <!-- Tabela de jogadores com mais vitórias -->
+    <table>
+      <thead>
+        <tr>
+          <th>Jogador</th>
+          <th>Vitórias</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Peixoto</td>
+          <td>9 Vitórias</td>
+        </tr>
+        <tr>
+          <td>Jão</td>
+          <td>4 Vitórias</td>
+        </tr>
+        <tr>
+          <td>Bubu</td>
+          <td>2 Vitórias</td>
+        </tr>
+        <tr>
+          <td>Jow</td>
+          <td>2 Vitórias</td>
+        </tr>
+        <tr>
+          <td>Leleko</td>
+          <td>1 Vitória</td>
+        </tr>
+        <tr>
+          <td>Kimberu</td>
+          <td>1 Vitória</td>
+        </tr>
+        <tr>
+          <td>Rodrigo</td>
+          <td>0 Vitórias</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Comandantes com mais Vitórias</h2>
+    <canvas id="myChart2"></canvas>
+    <!-- Tabela de comandantes com mais vitórias -->
+    <table>
+      <thead>
+        <tr>
+          <th>Comandante</th>
+          <th>Vitórias</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tevesh Szat, Doom of Fools</td>
+          <td>5 Vitórias</td>
+        </tr>
+        <tr>
+          <td>Kinnan, Bonder Prodigy</td>
+          <td>4 Vitórias</td>
+        </tr>
+        <tr>
+          <td>Sisay, Weatherlight Captain</td>
+          <td>4 Vitórias</td>
+        </tr>
+        <tr>
+          <td>Yuriko, the Tiger's Shadow</td>
+          <td>2 Vitórias</td>
+        </tr>
+        <tr>
+          <td>Nadu, Winged Wisdom</td>
+          <td>2 Vitórias</td>
+        </tr>
+        <tr>
+          <td>Ellivere of the Wild Court</td>
+          <td>1 Vitória</td>
+        </tr>
+        <tr>
+          <td>Augustin, Grand Arbiter IV</td>
+          <td>1 Vitória</td>
+        </tr>
+        <tr>
+          <td>Winota, Joiner of Forces</td>
+          <td>0 Vitórias</td>
+        </tr>
+        <tr>
+          <td>Jeska, Thrice Reborn</td>
+          <td>0 Vitórias</td>
+        </tr>
+        <tr>
+          <td>Tivit, Seller of Secrets</td>
+          <td>0 Vitórias</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script>
+      // Dados de vitórias por jogador (Vitórias de cada jogador)
+      const jogadoresData = {
+        labels: [
+          "Peixoto",
+          "Jão",
+          "Bubu",
+          "Jow",
+          "Leleko",
+          "Kimberu",
+          "Rodrigo",
+        ],
+        datasets: [
+          {
+            data: [9, 4, 2, 2, 1, 1, 0], // Vitórias totais por jogador
+            backgroundColor: [
+              "#FF6384",
+              "#36A2EB",
+              "#FFCE56",
+              "#4BC0C0",
+              "#9966FF",
+              "#FF9F40",
+              "#C9CBCF",
+            ],
+            hoverBackgroundColor: [
+              "#FF6384",
+              "#36A2EB",
+              "#FFCE56",
+              "#4BC0C0",
+              "#9966FF",
+              "#FF9F40",
+              "#C9CBCF",
+            ],
+          },
+        ],
+      };
+
+      // Configuração do gráfico de pizza para jogadores
+      const configJogadores = {
+        type: "pie",
+        data: jogadoresData,
+        options: {
+          plugins: {
+            legend: {
+              display: true,
+              position: "bottom",
+              labels: {
+                font: {
+                  size: 14,
+                },
+              },
+            },
+          },
+        },
+      };
+
+      // Renderizar gráfico de vitórias de jogadores
+      const myChart1 = new Chart(
+        document.getElementById("myChart1"),
+        configJogadores
+      );
+
+      // Dados de vitórias por comandante
+      const comandantesData = {
+        labels: [
+          "Tevesh Szat, Doom of Fools",
+          "Kinnan, Bonder Prodigy",
+          "Sisay, Weatherlight Captain",
+          "Yuriko, the Tiger's Shadow",
+          "Nadu, Winged Wisdom",
+          "Ellivere of the Wild Court",
+          "Augustin, Grand Arbiter IV",
+          "Winota, Joiner of Forces",
+          "Jeska, Thrice Reborn",
+          "Tivit, Seller of Secrets",
+        ],
+        datasets: [
+          {
+            data: [5, 5, 4, 2, 2, 1, 1, 0, 0, 0], // Vitórias de cada comandante
+            backgroundColor: [
+              "#FF6384",
+              "#36A2EB",
+              "#FFCE56",
+              "#4BC0C0",
+              "#9966FF",
+              "#FF9F40",
+              "#C9CBCF",
+              "#F7464A",
+              "#4D5360",
+              "#FFCD56",
+            ],
+            hoverBackgroundColor: [
+              "#FF6384",
+              "#36A2EB",
+              "#FFCE56",
+              "#4BC0C0",
+              "#9966FF",
+              "#FF9F40",
+              "#C9CBCF",
+              "#F7464A",
+              "#4D5360",
+              "#FFCD56",
+            ],
+          },
+        ],
+      };
+
+      // Configuração do gráfico de pizza para comandantes
+      const configComandantes = {
+        type: "pie",
+        data: comandantesData,
+        options: {
+          plugins: {
+            legend: {
+              display: true,
+              position: "bottom",
+              labels: {
+                font: {
+                  size: 14,
+                },
+              },
+            },
+          },
+        },
+      };
+
+      // Renderizar gráfico de vitórias por comandante
+      const myChart2 = new Chart(
+        document.getElementById("myChart2"),
+        configComandantes
+      );
+    </script>
+  </body>
+</html>
