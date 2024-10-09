@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emails</title>
+  </head>
+  <body>
+    <h1>Emails Registrados</h1>
+    <ul>
+      <% registered.forEach(email => { %>
+      <li>
+        <%= email.email %>
+        <form action="/emails/delete" method="post">
+          <input type="hidden" name="email" value="<%= email %>" />
+          <button type="submit" class="btn-delete">Excluir</button>
+        </form>
+      </li>
+      <% }) %>
+    </ul>
+  </body>
+</html>
