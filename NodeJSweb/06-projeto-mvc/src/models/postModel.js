@@ -1,4 +1,19 @@
-let posts = [];
+let posts = [
+  {
+    id: "1",
+    title: "teste",
+    content: "lorem ipsum...",
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  },
+  {
+    id: "2",
+    title: "teste 2",
+    content: "lorem ipsum...",
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  },
+];
 
 // Post { id, title, content, createdAt, updatedAt }
 
@@ -23,7 +38,7 @@ const postModel = {
   },
 
   savePost(post) {
-    posts.push(post);
+    posts.unshift(post);
   },
 
   updatePost(id, updatedPost) {
