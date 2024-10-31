@@ -1,0 +1,97 @@
+body {
+  background-image: url("img/image.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(252, 247, 247);
+  padding: 20px;
+}
+
+.header-inicio {
+  text-decoration: none;
+  color: rgb(241, 67, 67);
+  font-weight: bold;
+}
+
+.header-nav {
+  display: flex;
+  gap: 15px;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: #fa5f5f;
+}
+
+main h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 20vh;
+  color: #ff0000;
+  font-size: 50px;
+}
+
+main div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  min-height: 60vh;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-footer {
+  background-color: black;
+  padding: 20px;
+}
+
+.call-to-action {
+  background-color: #fa5f5f;
+  padding: 10px 20px;
+  border: white solid 2px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.call-to-action a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.call-to-action:hover {
+  background-color: #fff;
+  border: #fa5f5f solid 2px;
+}
+
+.call-to-action:hover a {
+  color: #fa5f5f;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  color: #fa5f5f;
+}
