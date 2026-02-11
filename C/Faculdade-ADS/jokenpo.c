@@ -12,7 +12,7 @@ int main (){
     printf("2. Papel\n");
     printf("3. Tesoura\n");
     printf("Escolha:\n");
-    scanf("%d", &escolhaComputador);
+    scanf("%d", &escolhaJogador);
 
     escolhaComputador = rand() % 3 + 1;
 
@@ -46,5 +46,15 @@ int main (){
     default:
         break;
     }
+
+    if (escolhaJogador == escolhaComputador){
+        printf("***Empate!***\n");
+    } else if ((escolhaJogador == 1) && (escolhaComputador == 3) || (escolhaJogador == 2) && (escolhaComputador == 1) || (escolhaJogador == 3) && (escolhaComputador == 2))
+    {
+        printf("Parabéns, Você ganhou!");
+    } else {
+        printf("Você perdeu!");
+    }
+    
     return 0;
 }
